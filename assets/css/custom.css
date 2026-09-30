@@ -1,0 +1,166 @@
+:root {
+  --primary-green: #1A3522;
+  --primary-green-dark: #102216;
+  --primary-green-light: #244830;
+  --gold-accent: #D0BA8B;
+  --gold-light: #E4D1A8;
+  --gold-dark: #B39B6A;
+  --bg-dark: #0A120D;
+  --bg-card: #0E1A13;
+  --text-main: #EDE8DF;
+  --text-muted: #A3B1A8;
+  --border-gold: rgba(208, 186, 139, 0.25);
+  --border-gold-hover: rgba(208, 186, 139, 0.6);
+}
+
+/* Custom Typography */
+.font-serif-luxury {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+.font-sans-modern {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Luxury Gold Text Gradient */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #F0E2C6 0%, #D0BA8B 50%, #B99F6B 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* Prevent descenders (g, j, y, p) from being clipped */
+  padding-bottom: 0.15em;
+  display: inline-block;
+  line-height: 1.27;
+}
+
+.text-gold {
+  color: var(--gold-accent);
+}
+
+.border-gold {
+  border-color: var(--border-gold);
+}
+
+.border-gold-accent {
+  border-color: var(--gold-accent);
+}
+
+/* Backgrounds */
+.bg-deep-green {
+  background-color: var(--primary-green);
+}
+
+.bg-dark-green {
+  background-color: var(--primary-green-dark);
+}
+
+.bg-surface-card {
+  background-color: var(--bg-card);
+}
+
+/* Glassmorphism */
+.glass-nav {
+  background-color: rgba(16, 34, 22, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(208, 186, 139, 0.15);
+}
+
+.glass-card {
+  background: linear-gradient(145deg, rgba(20, 39, 27, 0.85) 0%, rgba(10, 18, 13, 0.95) 100%);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--border-gold);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card:hover {
+  border-color: var(--border-gold-hover);
+  transform: translateY(-3px);
+  box-shadow: 0 16px 32px -8px rgba(0, 0, 0, 0.5), 0 0 20px rgba(208, 186, 139, 0.12);
+}
+
+/* Gold Button Styles */
+.btn-gold {
+  background: linear-gradient(135deg, #D0BA8B 0%, #B99F6B 100%);
+  color: #0A120D;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-gold:hover {
+  background: linear-gradient(135deg, #E4D1A8 0%, #CBB380 100%);
+  box-shadow: 0 8px 24px rgba(208, 186, 139, 0.35);
+  transform: translateY(-1px);
+}
+
+.btn-gold-outline {
+  border: 1px solid var(--gold-accent);
+  color: var(--gold-accent);
+  transition: all 0.3s ease;
+}
+
+.btn-gold-outline:hover {
+  background-color: rgba(208, 186, 139, 0.1);
+  border-color: var(--gold-light);
+  color: var(--gold-light);
+}
+
+/* Watermark Pattern */
+.bg-botanical-pattern {
+  background-image: radial-gradient(circle at 10% 20%, rgba(208, 186, 139, 0.03) 0%, transparent 40%),
+                    radial-gradient(circle at 90% 80%, rgba(208, 186, 139, 0.03) 0%, transparent 40%);
+}
+
+/* Floating WhatsApp Button Ripple Animation */
+@keyframes pulse-gold {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
+  }
+  70% {
+    box-shadow: 0 0 0 16px rgba(37, 211, 102, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
+.wa-pulse {
+  animation: pulse-gold 2s infinite;
+}
+
+/* Decorative Gold Line */
+.gold-divider {
+  width: 64px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--gold-accent) 0%, transparent 100%);
+}
+
+.gold-divider-center {
+  width: 80px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent 0%, var(--gold-accent) 50%, transparent 100%);
+}
+
+/* Tab active state */
+.tab-btn.active {
+  background-color: var(--gold-accent);
+  color: #0A120D;
+  font-weight: 600;
+  border-color: var(--gold-accent);
+}
+
+/* Image Lightbox Modal */
+.lightbox-modal {
+  display: none;
+}
+.lightbox-modal.active {
+  display: flex;
+}
